@@ -1,20 +1,23 @@
-import React from 'react';
-import Footer from '../layout/Footer';
-import Header from '../layout/Header';
-import CardTitle from '../components/Home/CardTitle';
-import SwapCard from '../components/Home/SwapCard';
-import ConnectWallet from '../components/Modals/ConnectWallet';
+import React from "react";
+import Footer from "../layout/Footer";
+import Header from "../layout/Header";
+import CardTitle from "../components/Home/CardTitle";
+import SwapCard from "../components/Home/SwapCard";
+import ConnectWallet from "../components/Modals/ConnectWallet";
+import SearchBox from "../components/Home/SearchBox";
 
 const Home = () => {
   return (
     <>
-        <Header/>
-        <CardTitle/>
-        <SwapCard/>
-        <ConnectWallet/>
-        <Footer/>
-    </>
-  )
-}
+      <Header />
+      <SearchBox />
+      <CardTitle />
+      <SwapCard />
 
-export default Home
+      <ConnectWallet />
+      <Footer />
+    </>
+  );
+};
+
+export default Home;

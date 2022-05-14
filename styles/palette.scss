@@ -7,9 +7,9 @@ html {
   --color-gold: #ff9f00;
   --color-gray: #898989;
   --color-code-gray: #1d1d1d;
-  --color-dove-gray: #707070;
-  --color-mercury: #e5e5e5;
-  --color-alto: #CFCFCF;
+  --color-dove-gray: #ffffff80;
+  --color-shark: #26262c;
+  --color-alto: #33333b;
 }
 
 html.transition,
@@ -36,7 +36,13 @@ html.transition *:after {
 .color-code-grey {
   color: var(--color-code-gray);
 }
+.color-dove-grey {
+  color: var(--color-dove-gray);
+}
 
+.color-shark {
+  color: var(--color-shark);
+}
 .mainbg {
   background-color: var(--color-blue-zodiac);
 }
