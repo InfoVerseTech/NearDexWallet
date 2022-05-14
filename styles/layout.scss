@@ -1,0 +1,13 @@
+.navbar-dark {
+    .navbar-nav {
+        .nav-link {
+            color: rgba(255, 255, 255, 0.55);
+            font-weight: 800;
+            padding: 0.5rem 1rem;
+            &:hover, &:focus, &:active, &.active {
+                color: var(--color-white);
+            }
+        }
+        
+    }
+}

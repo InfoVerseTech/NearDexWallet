@@ -1,0 +1,14 @@
+html,
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+}
+* {
+  box-sizing: border-box;
+}
+
+@import "~bootstrap/scss/bootstrap";
+@import 'palette';
+@import 'typography';
+@import 'mixins';
+@import 'custom';

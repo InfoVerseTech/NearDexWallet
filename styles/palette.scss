@@ -1,0 +1,48 @@
+html {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-blue-zodiac: #0c1235;
+  --color-main: #0c1235;
+  --color-bunting: #131a46;
+  --color-gold: #ff9f00;
+  --color-gray: #898989;
+  --color-code-gray: #1d1d1d;
+  --color-dove-gray: #707070;
+  --color-mercury: #e5e5e5;
+  --color-alto: #CFCFCF;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+// constant
+.white {
+  color: var(--color-white);
+}
+.color-grey {
+  color: var(--color-grey);
+}
+.color-main {
+  color: var(--color-main);
+}
+.black {
+  color: var(--color-black);
+}
+.color-code-grey {
+  color: var(--color-code-gray);
+}
+
+.mainbg {
+  background-color: var(--color-blue-zodiac);
+}
+.bgbunting {
+  background-color: var(--color-bunting);
+}
+.bgtransparent {
+  background-color: transparent;
+}
