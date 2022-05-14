@@ -1,14 +1,17 @@
-import React from 'react'
-import Footer from '../layout/Footer'
-import Header from '../layout/Header'
+import React from 'react';
+import Footer from '../layout/Footer';
+import Header from '../layout/Header';
+import CardTitle from '../components/Home/CardTitle';
+import SwapCard from '../components/Home/SwapCard';
+import ConnectWallet from '../components/Modals/ConnectWallet';
 
 const Home = () => {
   return (
     <>
         <Header/>
-        <section>
-            <h1 className='RED'>kGDIEFG</h1>
-        </section>
+        <CardTitle/>
+        <SwapCard/>
+        <ConnectWallet/>
         <Footer/>
     </>
   )

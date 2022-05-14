@@ -2,3 +2,40 @@
 body {
   font-size: var(--font-size-base);
 }
+
+.cardtitle {
+  h1 {
+    .linear-wipe {
+      text-align: center;
+
+      background: linear-gradient(
+        to right,
+        #d9af32 4.71%,
+        #a5e866 21.59%,
+        #4ebbe9 40.65%,
+        #4ebbe9 52.34%,
+        #a5e866 71.82%,
+        #d9af32 87.84%
+      );
+      background-size: 200% auto;
+
+      color: #000;
+      background-clip: text;
+      text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      animation: shine 3.5s linear infinite;
+      @keyframes shine {
+        to {
+          background-position: 200% center;
+        }
+      }
+    }
+  }
+}
+
+
+.connectbtn {
+  background-color: var(--color-woodsmoke);
+}
