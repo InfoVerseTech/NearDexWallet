@@ -25,6 +25,14 @@ export default function NearComp() {
     wallet.requestSignIn("senpaitraxh.testnet");
   }
 
+  const DisconnectWallet = async() => {
+    const config = TheConfig();
+    const near = await connect(config);
+    const wallet = new WalletConnection(near);
+    wallet.signOut();
+    SetAccount("Disconnected");
+  }
+
   const GetAddress = async() => { 
     const config = TheConfig();
     const near = await connect(config);
@@ -41,6 +49,7 @@ export default function NearComp() {
       </Head>
       <main>
         <button onClick={ConnectWallet}>Connect</button>
+        <button onClick={DisconnectWallet}>Disconnect</button>
         <button onClick={GetAddress}>Get Account ID</button>
         <p>{Account}</p>
       </main>
