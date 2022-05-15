@@ -52,8 +52,7 @@ const ConnectWallet = () => {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className="mb-4">
-          <Row className="d-flex justify-content-evenly align-items-center">
-            
+          <Row className="d-flex justify-content-evenly align-items-center"> 
             <CryptoBtn/>
           </Row>
         </Modal.Body>

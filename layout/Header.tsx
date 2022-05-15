@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navbar, Container, Nav, NavDropdown, Image } from "react-bootstrap";
 import { IoMdSettings, IoIosDocument } from "react-icons/io";
 import { RiBarChart2Fill } from "react-icons/ri";
@@ -6,8 +6,51 @@ import { HiOutlineFingerPrint } from "react-icons/hi";
 import { BiLogOut, BiSortAlt2 } from "react-icons/bi";
 import logo from "../assets/img/logo.png";
 import DarkMode from "./DarkMode";
+import * as nearAPI from "near-api-js";
+
+const { connect, keyStores, WalletConnection } = nearAPI;
 
 const Header = () => {
+  const [Account , SetAccount] = useState("");
+
+  const TheConfig = () => {
+    const config = {
+      networkId: "testnet",
+      keyStore: (new keyStores.BrowserLocalStorageKeyStore()),
+      nodeUrl: "https://rpc.testnet.near.org",
+      walletUrl: "https://wallet.testnet.near.org",
+      helperUrl: "https://helper.testnet.near.org",
+      explorerUrl: "https://explorer.testnet.near.org",
+    };
+    return config;
+  }
+
+  const ConnectWallet = async() => {
+    const config = TheConfig();
+    const near = await connect(config);
+    const wallet = new WalletConnection(near);
+    wallet.requestSignIn("senpaitraxh.testnet");
+  }
+
+  const DisconnectWallet = async() => {
+    const config = TheConfig();
+    const near = await connect(config);
+    const wallet = new WalletConnection(near);
+    wallet.signOut();
+    SetAccount("")
+  }
+
+  const CheckConnect = async () => {
+    const config = TheConfig();
+    const near = await connect(config);
+    const wallet = new WalletConnection(near);
+    if(wallet.isSignedIn() == true) {
+      SetAccount(wallet.getAccountId());
+    }
+  }
+
+  CheckConnect();
+
   return (
     <>
       <header className="header">
@@ -40,13 +83,13 @@ const Header = () => {
                   <RiBarChart2Fill className="me-2" /> Stats
                 </Nav.Link>
                 {/* <NavDropdown title="More" id="collasible-nav-dropdown" className="bg-dark">
-                  <NavDropdown.Item href="#">
+                    <NavDropdown.Item href="#">
                     Twitter
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#">
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
                     Discord
-                  </NavDropdown.Item>
-                </NavDropdown> */}
+                    </NavDropdown.Item>
+                    </NavDropdown> */}
               </Nav>
               <Nav>
                 <DarkMode />
@@ -55,12 +98,13 @@ const Header = () => {
                 <Nav.Link href="#" className="swapbtn px-4">
                   <IoMdSettings size="23" />
                 </Nav.Link>
-                <Nav.Link href="#" className="connectbtn px-4">
+                <Nav.Link href="#" className="connectbtn px-4" onClick={ConnectWallet}>
                   Connect Wallet
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
+          <p>Your Account: {Account}</p>
         </Navbar>
       </header>
     </>
