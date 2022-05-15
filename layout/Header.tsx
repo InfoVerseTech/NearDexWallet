@@ -11,7 +11,7 @@ import * as nearAPI from "near-api-js";
 const { connect, keyStores, WalletConnection } = nearAPI;
 
 const Header = () => {
-  const [Account , SetAccount] = useState("");
+  const [Account , SetAccount] = useState("Connect Wallet");
 
   const TheConfig = () => {
     const config = {
@@ -99,12 +99,11 @@ const Header = () => {
                   <IoMdSettings size="23" />
                 </Nav.Link>
                 <Nav.Link href="#" className="connectbtn px-4" onClick={ConnectWallet}>
-                  Connect Wallet
+                  {Account}
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
-          <p>Your Account: {Account}</p>
         </Navbar>
       </header>
     </>
