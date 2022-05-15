@@ -4,8 +4,8 @@ import * as nearAPI from "near-api-js";
 const { connect, keyStores, WalletConnection } = nearAPI;
 
 export default function NearComp() {
-  const [Account , SetAccount] = useState();
-  const [Balance , SetBalance] = useState();
+  const [Account , SetAccount] = useState("");
+
   const TheConfig = () => {
     const config = {
       networkId: "testnet",
@@ -30,16 +30,19 @@ export default function NearComp() {
     const near = await connect(config);
     const wallet = new WalletConnection(near);
     wallet.signOut();
-    SetAccount("Disconnected");
+    SetAccount("")
   }
 
-  const GetAddress = async() => { 
+  const CheckConnect = async () => {
     const config = TheConfig();
     const near = await connect(config);
     const wallet = new WalletConnection(near);
-    const walletAccountId = wallet.getAccountId();
-    SetAccount(walletAccountId);
+    if(wallet.isSignedIn() == true) {
+      SetAccount(wallet.getAccountId());
+    }
   }
+
+  CheckConnect();
 
   return (
     <div>
@@ -50,8 +53,7 @@ export default function NearComp() {
       <main>
         <button onClick={ConnectWallet}>Connect</button>
         <button onClick={DisconnectWallet}>Disconnect</button>
-        <button onClick={GetAddress}>Get Account ID</button>
-        <p>{Account}</p>
+        <p>Your Account: {Account}</p>
       </main>
     </div>
   )
