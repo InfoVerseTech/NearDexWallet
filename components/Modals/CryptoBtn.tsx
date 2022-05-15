@@ -72,7 +72,7 @@ const CryptoBtn = () => {
   return (
     <>
       {WallBtn.map((item) => (
-        <Col md={6} className="mb-3">
+        <Col md={6} className="mb-3" key={item.ID}>
           <div className="walconect-btn text-start mx-1">
             <div className="btnbox d-flex align-items-center">
               <Image src={item.Img.src} alt="" className="img-fluid" />

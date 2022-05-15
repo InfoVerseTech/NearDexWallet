@@ -2,7 +2,33 @@
 body {
   font-size: var(--font-size-base);
 }
+.linear-wipe {
+  text-align: center;
 
+  background: linear-gradient(
+    to right,
+    #d9af32 4.71%,
+    #4b59d8 40.65%,
+    #4ebbe9 52.34%,
+    #c9548e 21.59%,
+    #66e887 71.82%,
+    #a09e9e 87.84%
+  );
+  background-size: 200% auto;
+
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shine 3.5s linear infinite;
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+}
 .cardtitle {
   h1 {
     .linear-wipe {
@@ -38,6 +64,9 @@ body {
 .connectbtn {
   background-color: var(--color-woodsmoke);
   border-radius: 0.75rem;
+  &:hover, &:focus {
+    color: var(--color-white-mode);
+  }
 }
 
 .connectwalletmodal {

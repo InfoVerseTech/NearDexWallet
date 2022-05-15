@@ -21,7 +21,7 @@ const SearchBox = () => {
             <Col md={5}>
               <Card className="swap-card mt-5">
                 <Card.Body className="p-1">
-                  <InputGroup className="mb-0 p-3">
+                  <InputGroup className="mb-0 p-1">
                       <FiSearch size="30" className="color-dove-grey"/>
                     <FormControl
                     className="text-start"
