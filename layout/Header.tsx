@@ -6,6 +6,7 @@ import { HiOutlineFingerPrint } from "react-icons/hi";
 import { BiSortAlt2 } from "react-icons/bi";
 
 const Header = () => {
+  
   return (
     <>
       <header className="header">

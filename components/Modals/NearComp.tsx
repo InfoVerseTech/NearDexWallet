@@ -35,10 +35,6 @@ export default function NearComp() {
 
   return (
     <div>
-      <Head>
-        <title>Near Wallet connect</title>
-        <meta name="description" content="Near Wallet Connect" />
-      </Head>
       <main>
         <button onClick={ConnectWallet}>Connect</button>
         <button onClick={GetAddress}>Get Account ID</button>
