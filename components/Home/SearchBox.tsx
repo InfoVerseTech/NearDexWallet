@@ -17,7 +17,7 @@ const SearchBox = () => {
     <div>
       <section className="mt-5">
         <Container>
-          <Row className="d-flex justify-content-center align-items-center pt-3">
+          <Row className="d-flex justify-content-center align-items-center pt-5">
             <Col md={5}>
               <Card className="swap-card mt-5">
                 <Card.Body className="p-1">

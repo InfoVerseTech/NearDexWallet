@@ -1,68 +1,13 @@
 import React from "react";
 import { Image, Col } from "react-bootstrap";
 import cryptologo from "../../assets/img/bnb.png";
+import near from "../../assets/img/near.png";
 
 const CryptoBtn = () => {
   const WallBtn = [
     {
-      Img: cryptologo,
-      Title: "BNB",
-    },
-    {
-      Img: cryptologo,
-      Title: "BNB",
-    },
-    {
-      Img: cryptologo,
-      Title: "BNB",
-    },
-    {
-      Img: cryptologo,
-      Title: "BNB",
-    },
-    {
-      Img: cryptologo,
-      Title: "BNB",
-    },
-    {
-      Img: cryptologo,
-      Title: "BNB",
-    },
-    {
-      Img: cryptologo,
-      Title: "BNB",
-    },
-    {
-      Img: cryptologo,
-      Title: "BNB",
-    },
-    {
-      Img: cryptologo,
-      Title: "BNB",
-    },
-    {
-      Img: cryptologo,
-      Title: "BNB",
-    },
-    {
-      Img: cryptologo,
-      Title: "BNB",
-    },
-    {
-      Img: cryptologo,
-      Title: "BNB",
-    },
-    {
-      Img: cryptologo,
-      Title: "BNB",
-    },
-    {
-      Img: cryptologo,
-      Title: "BNB",
-    },
-    {
-      Img: cryptologo,
-      Title: "BNB",
+      Img: near,
+      Title: "near",
     },
     {
       Img: cryptologo,
