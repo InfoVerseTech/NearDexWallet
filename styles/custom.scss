@@ -64,7 +64,8 @@ body {
 .connectbtn {
   background-color: var(--color-woodsmoke);
   border-radius: 0.75rem;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: var(--color-white-mode);
   }
 }
@@ -136,10 +137,10 @@ body {
 .card.swap-card {
   background-color: var(--color-alto);
   box-shadow: 0px 0px 15px -3px var(--color-code-gray);
-border-radius: 0.75rem;
+  border-radius: 0.75rem;
   .form-label {
     margin-bottom: 0.5rem;
-    color: var(--color-white-mode);
+    color: var(--color-white);
     font-size: calc(var(--font-size-base) - 0.125rem);
     font-weight: 600;
     text-transform: capitalize;
@@ -183,7 +184,8 @@ border-radius: 0.75rem;
     color: var(--color-dove-gray);
     text-transform: uppercase;
     font-weight: 600;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: var(--color-white);
       outline: none;
       box-shadow: none;
