@@ -45,7 +45,9 @@ const CryptoBtn = () => {
     }
   }
 
-  CheckConnect();
+  if (typeof window !== undefined) {
+    CheckConnect();
+  }
 
   const WallBtn = [
     {

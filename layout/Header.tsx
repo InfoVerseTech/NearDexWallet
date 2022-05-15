@@ -49,7 +49,9 @@ const Header = () => {
     }
   }
 
-  CheckConnect();
+  if (typeof window !== undefined) {
+    CheckConnect();
+  }
 
   return (
     <>
