@@ -66,8 +66,8 @@ const Header = () => {
         >
           <Container fluid className="px-3 px-md-4">
             <Navbar.Brand href="/Home" className="fw-bold fs-28 linear-wipe">
-              <Image src={logo.src} className="img-fluid me-1" alt="Logo" />{" "}
-              InfoVerse
+            Info <Image src={logo.src} className="img-fluid" alt="Logo" />{" "}
+              erse
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
