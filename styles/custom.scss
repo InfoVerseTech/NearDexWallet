@@ -204,6 +204,17 @@ body {
       width: 22px;
       height: 22px;
     }
+    .walconect-btn {
+      background-image: linear-gradient(
+        to right,
+        var(--color-main) 0%,
+        var(--color-main) 100%
+      );
+      &:hover,
+      &:focus,
+      &:active {
+        background-image: linear-gradient(to right, #cddb04 0%, #0074a9 100%);
+      }
+    }
   }
 }
-
