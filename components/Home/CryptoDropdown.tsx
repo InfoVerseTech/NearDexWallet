@@ -14,9 +14,13 @@ const CryptoDropdown = () => {
       Title: "near",
     },
     {
-      Img: cryptologo,
-      Title: "BNB",
+      Img: ethereum,
+      Title: "Ethereum",
     },
+    {
+        Img: cryptologo,
+        Title: "BNB",
+      },
     {
       Img: thether,
       Title: "Tether",
