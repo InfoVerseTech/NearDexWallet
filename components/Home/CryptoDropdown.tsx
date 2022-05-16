@@ -4,6 +4,8 @@ import DropdownItem from "react-bootstrap/esm/DropdownItem";
 import cryptologo from "../../assets/img/bnb.png";
 import ethereum from "../../assets/img/ethereum.png";
 import near from "../../assets/img/near.png";
+import thether from "../../assets/img/thether.png";
+import usd from "../../assets/img/usd.png";
 
 const CryptoDropdown = () => {
   const DropdownItem = [
@@ -16,8 +18,12 @@ const CryptoDropdown = () => {
       Title: "BNB",
     },
     {
-      Img: ethereum,
-      Title: "near",
+      Img: thether,
+      Title: "Tether",
+    },
+    {
+      Img: usd,
+      Title: "usd",
     },
   ];
   return (
