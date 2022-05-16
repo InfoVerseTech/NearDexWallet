@@ -197,4 +197,13 @@ body {
       margin-right: 5px;
     }
   }
+  .dropdown-menu {
+    min-width: 20rem;
+    background-color: var(--color-main);
+    img {
+      width: 22px;
+      height: 22px;
+    }
+  }
 }
+
